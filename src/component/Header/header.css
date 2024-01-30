@@ -1,0 +1,310 @@
+
+.header{
+    padding: 2rem 2.4rem 0 2.4rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+
+}
+.parent-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(156, 153, 153);
+}
+.logo h4{
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+}
+.serach-bar{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+}
+.serach-bar .sec{
+    font-size: 1.5rem;
+}
+.serach-bar input{
+    width: 80%;
+    outline: none;
+    background-color: transparent;
+    border: none;
+ 
+}
+.searchbutton{
+    background-color: transparent;
+    padding: 0;
+    outline: none;
+    border: none;
+
+}
+.action-btn{
+    display: none;
+}
+.main-container{
+    max-width: 33.33%;
+    width: 100%;
+}
+/* .main-container:nth-child(1){
+    background: #000;
+    max-width: 33.33%;
+    width: 100%;
+} */
+.nav-icon{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+.nav-icon li {
+    list-style: none;
+    gap: 2rem;
+    font-size: 1.2rem;
+}
+.icon{
+   text-align: center;
+}
+.nav-bar ul{
+    display: flex;
+    flex-direction: row;
+}
+.nav-bar{
+    padding: 1rem;
+}
+.nav-bar ul{
+    gap: 2rem;
+}
+.active{
+    color: red;
+}
+.mob-nav{
+    display: none;
+}
+.mob-nav-menu{
+    display: none;
+}
+
+@media  (max-width: 768px) {
+        .header{
+            padding: 1.5rem 2rem 0 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+        .action-btn{
+            display: block;
+            outline: none;
+            border: none;
+            background: transparent;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-right: 5%;
+        }
+        .serach-bar input{
+            display: none;
+        }
+        .nav-icon .icon:nth-child(1),
+        .nav-icon .icon:nth-child(2){
+            display: none;
+        }
+        .nav-bar{
+            display: none;
+        }
+        .mob-nav {
+            display: block;
+            height: 100%;
+            width: 70%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            overflow-x: hidden;
+            padding: 1.5rem 2rem;
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+            border-right: 1px solid darkgrey;
+            text-align: justify;
+        }
+        .mob-nav-menu
+        {
+            display: block;
+            height: 100%;
+            width: 70%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            overflow-x: hidden;
+            padding: 0;
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+            border-right: 1px solid darkgrey;
+            text-align: justify;
+            
+        }
+        .mob-nav-menu.open,
+        .mob-nav.open{
+            transform: translateX(0);
+        }
+        
+        .navbar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav-item{
+            padding: .5rem 2rem;
+            height: 70px;
+            border-bottom: 1px solid darkgray;
+        }
+        .nav-item{
+            text-align: start;
+            letter-spacing: 1px;
+            font-weight: 700;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        .open-btn {
+            font-size: 20px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }
+        .close-btn{
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .drawee_Serchbar{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 24px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: .5px solid grey;
+        }
+     
+        .mob_serarch{
+            width: 80%;
+        }
+        .mob_serarch input{
+            width: 90%;
+            background-color: transparent;
+            outline: none;
+            border: none;
+        }
+        .mob_serarch .searchbutton{
+            font-size: 1.5rem;
+        }
+        .drawee-item{
+            padding: 1rem .5rem;
+            margin-top: 6rem;
+            height: 100%;
+        }
+        .shop{
+            margin-bottom: 5rem;
+        }
+        .drawee-item .shop .Mensection li{
+            list-style: none;
+            margin-bottom: 2%;
+        }
+        .drawee-item .shop .Mensection .shop-tittle{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .drawee-item .shop .Mensection .shop-item{
+            text-decoration: none;
+            color: gray;
+            font-family:'Times New Roman', Times, serif;
+        }
+
+    }
+@media  (max-width: 529px) {
+    .header{
+        padding: 1.2rem 1.7rem 0 1.7rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    .mob-nav ,
+    .mob-nav-menu{
+        width: 80%;
+    }
+    .nav-item{
+        padding: .3rem 1rem;
+        height: 70px;
+        border-bottom: 1px solid darkgray;
+        
+    }
+}
+@media  (max-width: 480px){
+    .mob_serarch .searchbutton{
+        font-size: 1.2rem;
+    }
+    .drawee_Serchbar{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 20px 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: .5px solid grey;
+    }
+}
+@media  (max-width: 425px) {
+    .header{
+        padding: 1rem 1.5rem 0 1.5rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    .mob-nav ,
+    .mob-nav-menu{
+        width: 90%;
+    }
+    
+}
+
+@media  (max-width: 375px) {
+    .header{
+        padding: .5rem 1rem 0 1rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    .mob_serarch .searchbutton{
+        font-size: 1.2rem;
+    }
+    .drawee_Serchbar{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 18px 26px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: .5px solid grey;
+    }
+    .mob_serarch input{
+        width: 85%;
+    }
+
+}

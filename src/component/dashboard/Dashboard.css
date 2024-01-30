@@ -1,0 +1,25 @@
+.object-fit-contaion{
+    object-fit: cover;
+    object-position: top;
+}
+.cus-slidecontainer{
+    height: 100vh;
+    max-height: 100vh;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+  
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+  
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
