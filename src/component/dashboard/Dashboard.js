@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import slide1 from "../../assets/images/1b_dekstop.webp"
 import slide2 from "../../assets/images/Bigzilla (1).png"
 import slide3 from "../../assets/images/Bigzilla (2).png"
@@ -15,9 +15,20 @@ import axios from 'axios';
 
 
 const Dashboard = () => {
-  const getdata = ()=>{
-    alert("hello")
-  }
+    const [Product,setProduct] = useState([]);
+    const getdata = ()=>{
+      axios.get("https://fakestoreapi.com/products")
+      .then((res)=>{
+        setProduct(res.data)
+      })
+      .then((err)=>{
+        console.log(err);
+      })
+    }
+    useEffect(()=>{
+      getdata();
+    },[])
+  
   return (
     <div>
       <div className="container-fluid" style={{padding:"0"}}>
@@ -52,7 +63,38 @@ const Dashboard = () => {
         </Swiper>
         </div>
       </div>
-      <button onClick={getdata}>click me</button>
+      <div className="slide-container">
+      <Swiper
+          slidesPerView={4}
+          spaceBetween={10}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+          style={{background:"yellow"}}
+        >
+          <div className="swiper-wrapper">
+          {
+  Product.map((item, index) => (
+    <SwiperSlide key={index}>
+      <div className="card" style={{ width: '18rem', height: '400px' }}>
+        <img src={item.image} className="card-img-top" alt="..." />
+        <div className="card-body">
+          <h5 className="card-title">{item.title}</h5>
+          <p className="card-text">{item.price}</p>
+          <a href="#" className="btn btn-primary" onClick={getdata}>
+            Go somewhere
+          </a>
+        </div>
+      </div>
+    </SwiperSlide>
+  ))
+}
+
+          </div>
+        </Swiper>
+      </div>
     </div>
   )
 }
