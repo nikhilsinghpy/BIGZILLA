@@ -34,4 +34,33 @@
     flex-direction: row;
     align-items: center;
     padding: 2rem;
-  }
+}
+.cu-card{
+    width: 322px;
+    height: auto;
+    margin: 1rem;   
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img-con{
+    width: 100%;
+    height: 322px
+}
+.img-con img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card-body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

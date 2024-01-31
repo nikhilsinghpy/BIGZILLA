@@ -12,6 +12,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import axios from 'axios';
+import img from "../../assets/images/Bigzilla.png";
 
 
 const Dashboard = () => {
@@ -67,31 +68,41 @@ const Dashboard = () => {
       <Swiper
           slidesPerView={4}
           spaceBetween={10}
-          pagination={{
-            clickable: true,
-          }}
+          // pagination={{
+          //   clickable: true,
+          // }}
+          
           modules={[Pagination]}
           className="mySwiper"
           style={{background:"yellow"}}
         >
           <div className="swiper-wrapper">
-          {
-  Product.map((item, index) => (
-    <SwiperSlide key={index}>
-      <div className="card" style={{ width: '18rem', height: '400px' }}>
-        <img src={item.image} className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">{item.title}</h5>
-          <p className="card-text">{item.price}</p>
-          <a href="#" className="btn btn-primary" onClick={getdata}>
-            Go somewhere
-          </a>
-        </div>
-      </div>
-    </SwiperSlide>
-  ))
-}
-
+          {/* {
+            Product.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div className="card" style={{ width: '18rem', height: '400px' }}>
+                  <img src={item.image} className="card-img-top" alt="..." />
+                  <div className="card-body">
+                    <h5 className="card-title">{item.title}</h5>
+                    <p className="card-text">{item.price}</p>
+                    <a href="#" className="btn btn-primary" onClick={getdata}>
+                      Go somewhere
+                    </a>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))
+          } */}
+            <div className="cu-card">
+              <div className="img-con">
+                <img src={img} alt="product img" />
+              </div>
+              <div className="card-body">
+                <h5 className="card-title">BIGZILLA</h5>
+                <h5 className="card-Price">@34343<span className='temp-price'>7874</span></h5>
+                <p className="card-text"></p>
+              </div>
+            </div>
           </div>
         </Swiper>
       </div>
