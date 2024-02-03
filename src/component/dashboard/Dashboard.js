@@ -12,8 +12,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import axios from 'axios';
-import img from "../../assets/images/Bigzilla.png";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
     const [Product,setProduct] = useState([]);
@@ -41,7 +40,7 @@ const Dashboard = () => {
     
     <div>
       <div className="container-fluid" style={{padding:"0"}}>
-        <div className="cus-slidecontainer">
+        <div className="cus-slidecontainer swiper-wrapper" style={{padding:"0"}}>
         <Swiper
           spaceBetween={30}
           effect={'fade'}

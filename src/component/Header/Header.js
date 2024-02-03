@@ -7,10 +7,13 @@ import { CiUser } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import { FcMenu } from "react-icons/fc";
 import { MdClose } from "react-icons/md";
+import Swal from 'sweetalert2';
+
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [mobnav,setmobnav] = useState(false);
+    const [email, setEmail] = useState('');
 
      const opennav = () =>{
         setIsOpen(true);
@@ -29,7 +32,7 @@ const Header = () => {
     }
     const closenav2 = ()=>{
         setmobnav(false)
-    }
+      };
   return (
     <div>
         <div className="header">
@@ -48,7 +51,7 @@ const Header = () => {
             </div>
             <div className="main-container" >
                 <ul className='nav-icon'>
-                    <li className="icon"><CiMail /></li>
+                    <li className="icon" onClick={handleShowAlert}><CiMail /></li>
                     <li className="icon"><CiUser/></li>
                     <li className="icon"><CiShoppingCart/></li>
                 </ul>
